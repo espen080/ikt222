@@ -4,6 +4,20 @@ as part of the course IKT222 at University of Agder.
 
 The application is a blog where users can register and post blogposts.
 
+## Installation
+Create virtual environment
+```bash
+py -3 -m venv .venv
+cd .venv/Scripts
+. activate
+cd ../..
+```
+
+Install requirements
+```bash
+pip install -r requirements.txt
+```
+
 ## Runing locally
 Run application locally by running command from project root
 ```bash
