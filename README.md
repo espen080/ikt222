@@ -23,6 +23,7 @@ Run application locally by running command from project root
 ```bash
 flask --app src/main.py run
 ```
+Application should now be running at http://localhost:5000/
 
 ## Docker
 Build and run application in docker image by running commands from project root
