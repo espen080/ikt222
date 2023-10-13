@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from models import BaseModel
 from db import DataBase
 
@@ -12,6 +12,13 @@ db.delete_all_in_all_tables()
 def index():
     return render_template("index.html")
 
+@app.route("/post", methods=["Get", "Post"])
+def post():
+    if request.method == "POST":
+        # Create a new post
+        print(request.form)
+        return render_template("index.html")
+    return render_template("post.html")
 
 @app.route("/about")
 def about():
