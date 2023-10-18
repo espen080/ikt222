@@ -5,7 +5,7 @@ from db import DataBase
 
 app = Flask(__name__, static_url_path='/static')
 db = DataBase(database_url="sqlite:///mydatabase.db", base_model=models.BaseModel)
-db.delete_all_in_all_tables()
+# db.delete_all_in_all_tables()
 
 
 @app.route("/")
