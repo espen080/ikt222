@@ -3,7 +3,7 @@
 
 {% block content %}
     <h1>Add a Blog Post</h1>
-    <form method="POST" action="{{ url_for('post') }}">
+    <form method="POST" action="{{ url_for('create_post') }}">
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" class="form-control" id="title" name="title" required>

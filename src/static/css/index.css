@@ -1,0 +1,13 @@
+.post{
+    flex-direction: row; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}

@@ -2,10 +2,17 @@
 
 {% block content %}
     <h1>Welcome to the IKT-222 Security Blog</h1>
-    <a class="btn btn-primary" href="{{ url_for('post') }}">New post</a>
+    <a class="btn btn-primary" href="{{ url_for('create_post') }}">New post</a>
 
     {% for post in posts %}
-        <h2>{{post.title}}</h2>
-        <p>{{post.content}}</p>
+    <div id="{{post.id}}" class="post">
+        <div  style="flex-direction: column;">
+            <a class="title" href="{{ url_for('view_post', post_id=post.id) }}">{{post.title}}</a>
+            <p>{{post.content | safe}}</p>
+        </div>
+        <div style="flex-direction: column;">
+            <a class="btn btn-primary" href="{{ url_for('edit_post', post_id=post.id) }}">Edit</a>
+        </div>
+    </div>
     {% endfor %}
 {% endblock %}

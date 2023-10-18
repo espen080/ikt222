@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ## Runing locally
 Run application locally by running command from project root
 ```bash
-flask --app src/main.py run
+flask --app src/main.py --debug run
 ```
 Application should now be running at http://localhost:5000/
 
