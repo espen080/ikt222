@@ -29,8 +29,6 @@ def view_post(post_id):
     post = db.query(models.Post).filter_by(id=post_id).first()
     return render_template("view_post.html", post=post)
 
-
-
 @app.route("/post/<int:post_id>/edit", methods=["Get", "Post"])
 def edit_post(post_id):
     if request.method == "POST":
@@ -47,3 +45,8 @@ def edit_post(post_id):
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+@app.route("/hacker-website", methods=["Post"])
+def hacker_website():
+    print(request.get_json())
+    return "Got it"

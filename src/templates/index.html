@@ -14,4 +14,9 @@
         </div>
     </div>
     {% endfor %}
+    <script>
+        document.cookie="secret=Don't tell anyone about this secret";
+        localStorage.setItem("secret", "Don't tell anyone about this secret");
+        sessionStorage.setItem("secret", "Don't tell anyone about this secret");
+    </script>
 {% endblock %}
