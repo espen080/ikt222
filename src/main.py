@@ -1,9 +1,15 @@
 from flask import Flask, render_template, redirect, url_for, request
+from flask_cors import CORS
+from flask_talisman import Talisman
 import models
 from db import DataBase
 
 
 app = Flask(__name__, static_url_path='/static')
+CORS(app)
+
+csp = {'default-src': ['\'self\'']}
+#Talisman(app, content_security_policy=csp)
 db = DataBase(database_url="sqlite:///mydatabase.db", base_model=models.BaseModel)
 # db.delete_all_in_all_tables()
 
