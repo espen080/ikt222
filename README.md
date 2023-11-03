@@ -4,6 +4,8 @@ as part of the course IKT222 at University of Agder.
 
 The application is a blog where users can register and post blogposts.
 
+## Disclaimer: This repository is ment to demonstrate security vulnerabilities as part of an education program. Do not attempt to exploit the vulnerabilities demonstrated here in any malicious way.
+
 ## Installation
 Create virtual environment
 ```bash
