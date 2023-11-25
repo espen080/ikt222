@@ -2,7 +2,7 @@
 Module containing database ORM class
 """
 
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy import create_engine
 from sqlalchemy.orm.exc import NoResultFound
 
@@ -44,8 +44,9 @@ class DataBase:
     def delete(self, model, **kwargs):
         session = self._get_session()
         try:
-            instance = session.query(model).filter_by(**kwargs).one()
-            session.delete(instance)
+            instances = session.query(model).filter_by(**kwargs).all()
+            for instance in instances:
+                session.delete(instance)
             session.commit()
         except NoResultFound:
             print("No matching record found for deletion.")

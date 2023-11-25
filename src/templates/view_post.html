@@ -3,6 +3,17 @@
 
 {% block content %}
     <h1>{{ post.title }}</h1>
+    <div>
+        By: {{post.user.first_name}} {{post.user.last_name}}
+        <br>
+        Created: {{post.created_at}}
+        {% if post.modified_at %}
+            <br>
+            Modified: {{post.modified_at}}
+        {% endif %}
+    </div>
+    <br>
     <p>{{ post.content | safe}}</p>
+    <a class="btn btn-primary" href="{{url_for('index')}}"">Back</a>
     
 {% endblock %}

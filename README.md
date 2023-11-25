@@ -20,6 +20,12 @@ Install requirements
 pip install -r requirements.txt
 ```
 
+Creating a .env file
+```bash
+python -c 'import secrets; print("APP_SECRET="+secrets.token_hex())' > .env
+```
+This will generate a random app secret in a .env file, keep it secret.
+
 ## Runing locally
 Run application locally by running command from project root
 ```bash

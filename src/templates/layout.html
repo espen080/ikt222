@@ -24,10 +24,10 @@
                     <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/post">New post</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class=""nav-item>
+                    <a class="nav-link" href="/logout">Logout</a>
                 </li>
             </ul>
         </div>
@@ -35,6 +35,15 @@
 
     <div class="container mt-5">
         {% block content %}{% endblock %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
     </div>
 
     <!-- Bootstrap JS and jQuery (optional) -->

@@ -11,3 +11,8 @@
     font-weight: bold;
     color: black;
 }
+
+.alert{
+    font-size: 20px;
+    color: red;
+}
