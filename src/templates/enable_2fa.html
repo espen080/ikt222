@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Enable 2FA</h2>
+<p>Scan the QR code below with your authenticator app:</p>
+<img src="{{ qrcode(qr_code_url) }}" alt="QR Code">
+<p>Enter the 6-digit code from your authenticator app:</p>
+<form action="{{ url_for('verify_2fa', user_id=user_id)}}" method="post">
+    <div class="form-group">
+        <input type="text" name="otp" required class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Verify</button>
+</form>
+{% endblock %}

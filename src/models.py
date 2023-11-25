@@ -17,6 +17,7 @@ class User(BaseModel):
     email = Column(String)
     password = Column(String)
     locked_to = Column(DateTime, default=None)
+    mfa_secret = Column(String, default=None)
 
     # Define the one-to-many relationship between User and Post
     posts = relationship('Post', back_populates='user', lazy='subquery')
