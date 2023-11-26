@@ -55,7 +55,6 @@ def auth():
 
     params = request.args.get("get_request_params")
     params = json.loads(params.replace("'", "\""))
-    print(params)
     user_consent = request.form.get("consent") == "on"
 
     if user_consent:

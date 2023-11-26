@@ -206,7 +206,6 @@ def callback():
     if params.get('state') != '1234':
         return make_response(jsonify({"error": "invalid_request"}), 400)
     response = requests.post(f'http://localhost:5001/token?code={params.get("code")}&client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET&grant_type=token')
-    print(response.json())
     if response.status_code == 200:
         data = response.json()
         session['access_token'] = data.get('access_token')

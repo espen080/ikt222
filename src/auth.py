@@ -37,7 +37,6 @@ def authenticate(view):
             # Redirect to the login page
             return redirect(url_for("login"))
         if g.token:
-            print(g.token)
             # Validate the token
             if not validate_token(g.token):
                 # Redirect to the login page
