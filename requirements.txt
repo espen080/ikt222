@@ -1,5 +1,7 @@
 bcrypt==4.0.1
 blinker==1.6.2
+certifi==2023.11.17
+charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
 Deprecated==1.2.14
@@ -10,6 +12,7 @@ Flask-QRcode==3.1.0
 flask-talisman==1.1.0
 greenlet==3.0.0
 gunicorn==21.2.0
+idna==3.6
 importlib-resources==6.1.1
 itsdangerous==2.1.2
 Jinja2==3.1.2
@@ -25,8 +28,10 @@ pyotp==2.9.0
 pypng==0.20220715.0
 python-dotenv==1.0.0
 qrcode==7.4.2
+requests==2.31.0
 rich==13.7.0
 SQLAlchemy==2.0.21
 typing_extensions==4.8.0
+urllib3==2.1.0
 Werkzeug==3.0.0
 wrapt==1.16.0

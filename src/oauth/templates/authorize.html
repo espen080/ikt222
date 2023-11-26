@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Authorization</title>
+</head>
+<body>
+    <h2>OAuth Authorization</h2>
+    <p>
+        <strong>Client:</strong> {{ params.get('client_id') }}<br>
+        <strong>Scope:</strong> {{ params.get('scopes') }}<br>
+    </p>
+    
+    <form method="POST" action="{{url_for('auth', get_request_params=params)}}">
+        <label for="consent">Do you authorize the application to access your data?</label>
+        <input type="checkbox" name="consent" id="consent" required>
+        <input type="submit" value="Accept">
+    </form>
+</body>
+</html>
+

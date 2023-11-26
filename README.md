@@ -33,6 +33,12 @@ flask --app src/main.py --debug run
 ```
 Application should now be running at http://localhost:5000/
 
+Running the auth server locally
+```bash
+flask --app src/oauth/server.py --debug run --port 5001
+```
+Oauth server should now be running at http://localhost:5001/
+
 ## Docker
 Build and run application in docker image by running commands from project root
 ```bash
